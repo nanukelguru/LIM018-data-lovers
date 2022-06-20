@@ -4,10 +4,12 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Historias de Usuario](#3-historias-de-usuario)
-* [4. Prototipos](#4-prototipos)
+* [3. Planificación](#3-planificación-📋)
+* [4. Prototipos](#4-prototipos-🚀)
 * [5. Interfaz](#5-interfaz)
-* [6. Objetivos de aprendizaje](#6-objetivos-de-aprendizaje)
+* [6. Construido con](#6-construido-con-🛠️)
+* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
+* [8. Autoras](#8-autoras-✒️)
  
 
 ***
@@ -28,12 +30,16 @@ hacerlo es creando _interfaces_ y _visualizaciones_.
 ## 2. Resumen del proyecto
 ![Imagen1](src/images/Ghibli%20lovers.PNG)
 
-Ghibli lovers es una pagina dirigida a los fans y seguidores del trabajo del estudio Ghibli.
+Ghibli lovers es una página dirigida a los fans y seguidores del trabajo del estudio Ghibli.
 
-## 3. Historias de usuario
+En esta página los usuarios podran visualizar las peliculas del estudio Ghibli y podran filtrarla de acuerdo a la informacion que deseen visualizar, como antiguedad, orden alfabetico, etc.
+
+## 3. Planificación 📋
+
+### Historias de Usuario
 
 
-## 4. Prototipos
+## 4. Prototipos 🚀
 
 ### Prototipo de baja fidelidad
 ![Imagen2](src/images/Prototipo%20I.jpg)
@@ -44,7 +50,16 @@ Ghibli lovers es una pagina dirigida a los fans y seguidores del trabajo del est
 
 
 ## 5. Interfaz
-## 6. Objetivos de aprendizaje
+
+https://fiorellitamaya.github.io/LIM018-data-lovers/src
+
+## 6. Construido con 🛠️
+* Figma
+* Visual Studio Code
+* Github
+
+
+## 7. Objetivos de aprendizaje
 
 Los objetivos de aprendizaje estudiados fueron:
 
@@ -102,3 +117,7 @@ Los objetivos de aprendizaje estudiados fueron:
 ### research
 
 - [ ] Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad
+
+## 8. Autoras ✒️
+* [Fiorella Amaya](https://github.com/fiorellitamaya/)
+* [Angelica Lopez](https://github.com/nanukelguru/)
