@@ -1,6 +1,6 @@
-import { films } from './data.js';
+import {films} from './data.js';
 import data from './data/ghibli/ghibli.js';
-// console.log(films, data);
+console.log(films, data);
 
 //JALANDO DATA DESDE J.SON
 
@@ -17,7 +17,7 @@ const dataFilms = ghibli.films
 // // console.log(dataFilms)
 
 const posters = dataFilms.map(dataFilms => (dataFilms.poster));
-// console.log(posters)
+console.log(posters)
 
 const filmCards = document.getElementById("filmCards") 
 
