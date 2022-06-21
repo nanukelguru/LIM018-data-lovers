@@ -26,3 +26,5 @@ filmCards.innerHTML+= `<img src="${poster}" alt="imagen">`
 })
 
 // })
+
+
