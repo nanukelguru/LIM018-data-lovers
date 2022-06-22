@@ -26,5 +26,12 @@ filmCards.innerHTML+= `<img src="${poster}" alt="imagen">`
 })
 
 // })
+let linkPeliculas = document.getElementById("linkPeliculas")
+let home = document.getElementById("home");
 
+/* Mostrar films y remover encabezado1*/
+linkPeliculas.addEventListener('click',() => {
+    home.style.display = "none";
+    films.style.display = "inline";
+})
 

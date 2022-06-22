@@ -1,6 +1,15 @@
 body{
     background:#E7E1C9;
 }
+h1
+ {
+  font-family: 'Indie Flower',cursive;
+  position: absolute;
+  font-size: 95px;
+  left: 862px;
+  line-height: 85%;
+  margin-top: 190px;
+}
 
 .encabezado{
     max-width: 1350px;
@@ -135,3 +144,4 @@ footer{
     font-family: 'Indie Flower';
     font-size: 14px;
 }
+
