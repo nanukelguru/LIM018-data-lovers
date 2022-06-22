@@ -1,24 +1,16 @@
-import {films} from './data.js';
+import {showFilms} from './data.js';
 import data from './data/ghibli/ghibli.js';
 // console.log(films, data);
 
-//JALANDO DATA DESDE J.SON
-
-// let dataFilms;
+// let dataFilms;               //<----Jalando toda la Data desde archivo json
 // fetch('./data/ghibli/ghibli.json')
 // .then(studio => studio.json())
 // .then(data=>{
 //   dataFilms = data.films;
 
-const ghibli = data
-// // console.log(ghibli)
-
-const dataFilms = ghibli.films
-// // console.log(dataFilms)
 
 // Jalando todo los links de los posters de la data
-const posters = dataFilms.map(dataFilms => (dataFilms.poster));
-// console.log(posters)
+// const posters = dataFilms.map(dataFilms => (dataFilms.poster));
 
 const title = dataFilms.map(dataFilms => (dataFilms.title))
 // console.log(title)
