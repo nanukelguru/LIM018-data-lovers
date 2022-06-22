@@ -1,5 +1,20 @@
 body{
     background:#E7E1C9;
+    cursor: url(images/susuwatari.cur), auto;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(101, 95, 95);
+    border-radius: 10px;
+    
+}
+
+nav, a, input, button{
+    cursor: url(images/susuwatari.cur),auto;
 }
 h1
  {
@@ -68,7 +83,6 @@ h1
     /* background-color: coral; */
     margin: 0 50px 0 50px;
     border-radius: 15px;
-   
 }
 
 .inicio p{
@@ -79,7 +93,6 @@ h1
     line-height: 45px;
     vertical-align: middle;
     margin: 0 50px 0 20px;
-    
 }
 
 #encabezado2{
@@ -97,16 +110,13 @@ h1
     font-family: 'Comic Neue';
     font-size: 20px;
     line-height: 25px;
-    width: 250px;
+    width: 220px;
     height: 240px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
     padding: 0px 5px 5px 20px;
     margin: 80px 5px 5px 30px;
     border-radius: 20px;
     float: left;
-    
-  
-    
 }
 
 .peliculas h2{
@@ -121,27 +131,29 @@ h3{
     font-family: 'Indie Flower';
 }    
 
-
-/* main{
-    background-color: aqua;
-}  */
-
-
-
 .posters{
     /* background-color:mediumvioletred; */
     display: flex;
     flex-wrap: wrap;
     padding: 5px 20px 20px 60px;
     margin: auto;
-    width: 70%; 
-
- 
-    
+    width: 72%; 
+   
 }
+.cards{
+
+}
+.cards img{
+    width: 200px;
+    height: 270px;
+    border-radius: 5%;
+    margin: 2%;
+}
+
+
 footer{
     text-align: center;
     font-family: 'Indie Flower';
-    font-size: 14px;
+    font-size: 18px;
 }
 
