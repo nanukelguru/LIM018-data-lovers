@@ -1,6 +1,6 @@
 import {films} from './data.js';
 import data from './data/ghibli/ghibli.js';
-console.log(films, data);
+// console.log(films, data);
 
 //JALANDO DATA DESDE J.SON
 
@@ -16,14 +16,24 @@ const ghibli = data
 const dataFilms = ghibli.films
 // // console.log(dataFilms)
 
+// Jalando todo los links de los posters de la data
 const posters = dataFilms.map(dataFilms => (dataFilms.poster));
-console.log(posters)
+// console.log(posters)
+
+const title = dataFilms.map(dataFilms => (dataFilms.title))
+// console.log(title)
 
 const filmCards = document.getElementById("filmCards") 
 
 posters.forEach(poster => {
 filmCards.innerHTML+= `<img src="${poster}" alt="imagen">`
 })
+
+// posters.forEach((poster, title) => {
+//     filmCards.innerHTML+= `
+//     <img src="${poster}" alt="imagen">
+//     <p>"${title}</p>`
+// })
 
 // })
 
