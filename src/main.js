@@ -12,25 +12,13 @@ import data from './data/ghibli/ghibli.js';
 // Jalando todo los links de los posters de la data
 // const posters = dataFilms.map(dataFilms => (dataFilms.poster));
 
-const title = dataFilms.map(dataFilms => (dataFilms.title))
-// console.log(title)
+showFilms(data.films)
 
-const filmCards = document.getElementById("filmCards") 
 
-posters.forEach(poster => {
-filmCards.innerHTML+= `<img src="${poster}" alt="imagen">`
-})
 
-// posters.forEach((poster, title) => {
-//     filmCards.innerHTML+= `
-//     <img src="${poster}" alt="imagen">
-//     <p>"${title}</p>`
-// })
-
-// })
 let linkPeliculas = document.getElementById("linkPeliculas")
 let linkInicio = document.getElementById("linkInicio")
-let home = document.getElementById("home");
+let home = document.getElementById("home")
 let films1 = document.getElementById("films")
 
 /* Mostrar films y remover encabezado1*/
