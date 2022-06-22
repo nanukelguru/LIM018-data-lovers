@@ -1,19 +1,16 @@
-export const createDataFilms = function() => {
-  return 'createDataFilms';
-};
+export function showFilms(dataFilms) {
+  const filmCards = document.getElementById("filmCards") //<-- Llamando al contenedor de html
+    dataFilms.forEach(film => {
+        filmCards.innerHTML+= getFilmDiv(film)
+    })
+}
 
-// export const createDataFilms = function(dataFilms) { 
-//   const {poster, title, release_date} = dataFilms //Manera simplicada de poner const poster = dataFilms.poster...
-//     return `
-//     <div class="cards" id="filmCards">
-//       <img src="${poster}" alt="imagen" >
-//       <p id="title"> ${title} </p>
-//       <p id="date"> ${release_date} </p>
-//     </div>`
-// }
-
-
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+export function getFilmDiv(film) {
+  return `<div class="card">
+      <img src="${film.poster}" alt="imagen">
+      <img id="star" src="images/estrellita.png">
+      <p id="score">${film.rt_score}</p>
+      <h2>${film.title}</h2>
+      <p>${film.release_date}</p>
+      </div>`
+ }
