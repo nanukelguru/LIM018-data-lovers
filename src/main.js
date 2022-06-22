@@ -20,7 +20,7 @@ const dataFilms = ghibli.films
 const posters = dataFilms.map(dataFilms => (dataFilms.poster));
 // console.log(posters)
 
-const title = dataFilms.map(dataFilms => (dataFilms.title))
+const titles = dataFilms.map(dataFilms => (dataFilms.title))
 // console.log(title)
 
 const filmCards = document.getElementById("filmCards") 
@@ -28,6 +28,10 @@ const filmCards = document.getElementById("filmCards")
 posters.forEach(poster => {
 filmCards.innerHTML+= `<img src="${poster}" alt="imagen">`
 })
+
+titles.forEach(title => {
+    filmCards.innerHTML+= `<p>"${title}"</p>`
+    })
 
 // posters.forEach((poster, title) => {
 //     filmCards.innerHTML+= `
