@@ -1,4 +1,4 @@
-import {films} from './data.js';
+import {createDataFilms} from './data.js';
 import data from './data/ghibli/ghibli.js';
 // console.log(films, data);
 
@@ -20,24 +20,76 @@ const dataFilms = ghibli.films
 const posters = dataFilms.map(dataFilms => (dataFilms.poster));
 // console.log(posters)
 
+// const filmCards = dataFilms.map(function(dataFilms){ 
+//     return createDataFilms(dataFilms)
+// })
+
+
 const titles = dataFilms.map(dataFilms => (dataFilms.title))
-// console.log(title)
+// // console.log(title)
 
-const filmCards = document.getElementById("filmCards") 
 
+// const cards = document.getElementById("filmCards") 
+// // cards.innerHTML = filmCards.join('')
+
+
+const cards = document.getElementById("filmCards") 
+
+
+
+// SI FUNCIONA
 posters.forEach(poster => {
-filmCards.innerHTML+= `<img src="${poster}" alt="imagen">`
+cards.innerHTML+= `<img src="${poster}" alt="imagen">`
 })
 
 titles.forEach(title => {
-    filmCards.innerHTML+= `<p>"${title}"</p>`
+    cards.innerHTML+= `<p>"${title}"</p>`
     })
 
+// dataFilms.forEach(function (elemento) {
+// filmCards.innerHTML+= 
+// `<img src="${poster}" alt="imagen">`
+
+
+    // })
+
+
+
+
+// SALE CON INDICES
 // posters.forEach((poster, title) => {
 //     filmCards.innerHTML+= `
 //     <img src="${poster}" alt="imagen">
 //     <p>"${title}</p>`
 // })
+
+
+
+// PRUEBA DE EJEMPLO DE STACKOVERFLOW
+// function galeria(dataFilms) {
+//     let html = '';
+    
+//     imagenes.forEach(function(dataFilms){
+//       html += `
+//         <div class="galeria-item">
+//           <img src="${dataFilms.poster}" alt="imagen" width="200px" />
+//           <h3>${dataFilms.tittle}</h3>
+//           <p>${dataFilms.release_date}</p>
+//         </div>
+//       `;
+//     });
+    
+//     $('#filmCards').html(html);
+//   }
+  
+//   $(function() {
+//     galeria(dataFilms);
+//   });
+
+
+
+
+
 
 // })
 
