@@ -14,8 +14,6 @@ export function getFilmDiv(film) {
       <p>${film.release_date}</p>
       </div>`
  }
-<<<<<<< HEAD
-=======
 
  export function sortAz (films) {
   return films.sort((a,b) => {
@@ -25,4 +23,3 @@ export function getFilmDiv(film) {
 
  
  
->>>>>>> 5ec6a6157e6d4277d9d2c528bc3997cac386f749
