@@ -12,8 +12,14 @@ import data from './data/ghibli/ghibli.js';
 // Jalando todo los links de los posters de la data
 // const posters = dataFilms.map(dataFilms => (dataFilms.poster));
 
-sortAz(data.films)
 showFilms(data.films)
+
+let AZ = document.getElementById("AZ");
+AZ.addEventListener("click", function(){
+   showFilms(sortAz(data.films))
+})
+
+
 
 let linkPeliculas = document.getElementById("linkPeliculas")
 let linkInicio = document.getElementById("linkInicio")
@@ -28,6 +34,6 @@ linkPeliculas.addEventListener('click',() => {
 
 linkInicio.addEventListener('click', () => {
     home.style.display = "inline";
-    films1.remove('films1')
-})
+    films1.style.display="none";
    
+})
