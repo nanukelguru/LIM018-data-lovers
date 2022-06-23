@@ -14,3 +14,12 @@ export function getFilmDiv(film) {
       <p>${film.release_date}</p>
       </div>`
  }
+
+ export function sortAz (films) {
+  return films.sort((a,b) => {
+    if (a.title > b.title) {return -1}
+  });
+ }
+
+ 
+ 
