@@ -1,8 +1,9 @@
 export function showFilms(dataFilms) {
   const filmCards = document.getElementById("filmCards") //<-- Llamando al contenedor de html
-    dataFilms.forEach(film => {
-        filmCards.innerHTML+= getFilmDiv(film)
-    })
+  filmCards.innerHTML='';
+  dataFilms.forEach(film => {
+    filmCards.innerHTML+= getFilmDiv(film)
+  })
 }
 
 export function getFilmDiv(film) {
@@ -18,6 +19,9 @@ export function getFilmDiv(film) {
  export function sortAz (films) {
   return films.sort((a,b) => {
     if (a.title > b.title) {return -1}
+    if (a.title < b.title) {return 1}
+    return 0;
+
   });
  }
 

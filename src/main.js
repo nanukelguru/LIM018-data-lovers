@@ -11,8 +11,13 @@ import data from './data/ghibli/ghibli.js';
 
 // Jalando todo los links de los posters de la data
 // const posters = dataFilms.map(dataFilms => (dataFilms.poster));
-sortAz(data.films)
+
 showFilms(data.films)
+
+let AZ = document.getElementById("AZ");
+AZ.addEventListener("click", function(){
+   showFilms(sortAz(data.films))
+})
 
 
 
@@ -29,24 +34,9 @@ linkPeliculas.addEventListener('click',() => {
 
 linkInicio.addEventListener('click', () => {
     home.style.display = "inline";
-    films1.remove('films1')
+    films1.style.display="none";
    
 })
-// let checkboxes = document.querySelector('.checkbox');
-// for(let checkbox of checkboxes){
-//     checkbox.addEventListener('click', function(){
-//         if(this.checked == true) {
-//             console.log(this.value);
-//         } else {
-//             console.log('aprieta check por fa');
-//         }
-//     })
-// }
 
-// let checkbox = document.querySelector("filtros");
-// console.log(checkbox.checked);
 
-// if(checkbox.checked){
-//     console.log("the checkbox is checked");
-// }
 let checkboxes = document.getElementsByName('filtros')
