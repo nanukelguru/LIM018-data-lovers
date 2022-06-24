@@ -18,9 +18,10 @@ export function getFilmDiv(film) {
 
  export function sortAz (films) {
   return films.sort((a,b) => {
-    if (a.title > b.title) {return -1}
-    if (a.title < b.title) {return 1}
-    return 0;
+    if (a.title < b.title) {return 0}
+    if (a.title > b.title) {return 1}
+ 
+    return -1;
 
   });
  }
