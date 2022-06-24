@@ -181,6 +181,11 @@ h3{
     margin: 2%;
 }
 
+.cards img:hover{
+    width: 205px;
+    height: 275px;
+}
+
 .cards h2{
     font-family: 'Indie Flower';
     text-align: center;
