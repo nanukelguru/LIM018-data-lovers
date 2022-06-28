@@ -1,4 +1,4 @@
-import {showFilms, sortBy, sortAz, sortZa, sortOldest, sortLessOld} from './data.js';
+import {showFilms, sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, showFilmsInformation, getInformationDiv} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // let dataFilms;             //<----Jalando toda la Data desde archivo json
@@ -12,13 +12,12 @@ let linkInicio = document.getElementById("linkInicio2")
 let home = document.getElementById("home")
 let films1 = document.getElementById("films")
 
-
-linkPeliculas.addEventListener('click',() => { // <---- Mostrar films y remover encabezado1
+linkPeliculas.addEventListener('click',() => { // <---- Mostrar seccion Peliculas
     home.style.display = "none";
     films1.style.display = "inline";
 })
 
-linkInicio.addEventListener('click', () => {
+linkInicio.addEventListener('click', () => { //<---- Mostrar Inicio
     home.style.display = "inline";
     films1.style.display="none";
    
@@ -50,3 +49,35 @@ let menosAntiguo = document.getElementById("menosAntiguo"); //----> Ordenando po
 menosAntiguo.addEventListener("click", function(){
     showFilms(sortLessOld(data.films))
 })
+
+let byDirector = document.getElementById("directores");
+console.log(byDirector)
+
+byDirector.addEventListener("click", function(event){
+        console.log(event.target)
+    showFilms(filterByDirector(data.films))
+    })
+
+
+// console.log(filterByDirector(data.films))
+
+
+// let showInformation = document.querySelectorAll(".filmposter"); 
+// console.log(showInformation)
+// showInformation.forEach(film =>{
+// film.addEventListener("click", function(event){
+//         console.log(event.target.id)
+//         showFilmsInformation(event.target.id) //----> Mostrando la informacion de las peliculas
+//     })
+// })
+
+
+// const directores = data.films.map(function(dataFilms){ 
+//         return dataFilms.director
+// })
+// console.log(directores)
+
+// const productores = data.films.filter(function(film){
+//     return film.producer === "Hayao Miyazaki"
+// })
+// console.log(productores)

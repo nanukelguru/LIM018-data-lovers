@@ -23,7 +23,6 @@
         <nav>
           <a href="#" id="linkInicio">INICIO</a>
           <a href="#" id="linkPeliculas">PELICULAS</a>
-          <a href="#" id="linkCreadores">CREADORES</a>
           <a href="#" id="linkPersonajes">PERSONAJES</a>
           <a href="#" id="linkCriaturas">CRIATURAS</a>
           <input type="search" placeholder="Buscar..." name="buscador">
@@ -54,11 +53,10 @@
       <header>
         <img id="imagenEncabezado" src="images/totoro gif.gif">
         <img id="ghibliLovers2" src="images/logo Ghibli lovers.png" alt="Ghibli lovers">
-        
+
         <nav>
           <a href="#" id="linkInicio2">INICIO</a>
           <a href="#" id="linkPeliculas2">PELICULAS</a>
-          <a href="#" id="linkCreadores2">CREADORES</a>
           <a href="#" id="linkPersonajes2">PERSONAJES</a>
           <a href="#" id="linkCriaturas2">CRIATURAS</a>
           <input type="search" placeholder="Buscar..." name="buscador">
@@ -69,33 +67,92 @@
 
     <section class="peliculas">
       <nav>
-        <h3>Ordenar por:</h3>
-        <ul>
-          <li id="Popularidad">Popularidad</li>
-          <li id="AZ">A-Z</li>
-          <li id="ZA">Z-A</li>
-          <li id="masAntiguo">Más antiguo</li>
-          <li id="menosAntiguo">Menos antiguo</li>
+        <div class="navegador" id="ordenar">
+          <h3>Ordenar por:</h3>
+          <ul>
+            <li id="Popularidad">Popularidad</li>
+            <li id="AZ">A-Z</li>
+            <li id="ZA">Z-A</li>
+            <li id="masAntiguo">Más antiguo</li>
+            <li id="menosAntiguo">Menos antiguo</li>
+          </ul>
+        </div>
 
-        </ul>
+        <div class="navegador" id="filtrar">
+          <h3>Filtrar por:</h3>
+          <ul>
+            <li id="Director">Director</li>
+            <ul id="directores" class="lista directores">
+              <li>Hayao Miyazaki</li>
+              <li>Isao Takahata</li>
+              <li>Yoshifumi Kondo</li>
+              <li>Hiroyuki Morita</li>
+              <li>Goro Miyazaki</li>
+              <li>Hiromasa Yonebayashi</li>
+            </ul>
+            <li id="Productor">Productor</li>
+            <ul id="productores" class="lista productores">
+              <li>Isao Takahata</li>
+              <li>Hayao Miyazaki</li>
+              <li>Toru Hara</li>
+              <li>Toshio Suzuki</li>
+              <li>Yoshiaki Nishimura</li>
+
+            </ul>
+          </ul>
+        </div>
       </nav>
 
-      <h1>Películas</h2>
+
 
       <main class="posters">
 
+        <h1>Películas</h1>
+
         <div class="cards" id="filmCards">
           <div id="filmInformation">
-
           </div>
         </div>
 
       </main>
+    </section>
   </article>
+
+  <section id="personajes" class="personajes">
+    <nav>
+      <div class="navegador" id="ordenar">
+        <h3>Ordenar por:</h3>
+        <ul>
+          <li id="AZ">A-Z</li>
+          <li id="ZA">Z-A</li>
+        </ul>
+      </div>
+
+      <div class="navegador" id="filtrar">
+        <h3>Filtrar por pelicula:</h3>
+        <ul id="peliculas" class="lista peliculas">
+          <li>Hayao Miyazaki</li>
+          <li>Isao Takahata</li>
+          <li>Yoshifumi Kondo</li>
+          <li>Hiroyuki Morita</li>
+          <li>Goro Miyazaki</li>
+          <li>Hiromasa Yonebayashi</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="posters">
+
+      <h1>Personajes</h1>
+      <div class="card" id="characters">
+      </div>
+    </main>
+
+
+
   </section>
 
-  <section id="Creadores">
-  </section>
+
 
   <footer>
     Created by Fiorella Amaya & Angelica Lopez
