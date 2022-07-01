@@ -1,4 +1,4 @@
-import { showFilms, sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, showFilmsInformation} from './data.js';
+import { showFilms, sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, getInformationDiv} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // let dataFilms;             //<----Jalando toda la Data desde archivo json
@@ -115,9 +115,10 @@ let showInformation = document.querySelectorAll(".filmposter");
 showInformation.forEach(film => {
     film.addEventListener("click", function (event) {
         const title = event.target.id
-        showFilmsInformation(data.films, title) //----> Mostrando la informacion de las peliculas
+        getInformationDiv(data.films.find((film)=> film.title === title )) //----> Mostrando la informacion de las peliculas
     })
 })
+
 
 
 

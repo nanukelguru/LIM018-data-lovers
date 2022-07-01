@@ -66,20 +66,14 @@ export function filterByProductor(films, productor) {
 
 export function getInformationDiv(film) {
   const filmInformation = document.createElement("div");
-  filmInformation.innerHTML = `<div class="information">
+  filmInformation.innerHTML = `<div class="ventanamodal">
       <h2>${film.title}</h2>
       <h3>${film.release_date}</h3>
       <p>${film.description}</p>
       </div>`
-  const mainPosters = document.querySelector(".posters")
-  mainPosters.appendChild(filmInformation)
-}
-
-export function showFilmsInformation(film, title) {
-  film.filter(function (info) {
-    return info.title === title
-  })
-  getInformationDiv()
+  const divFilmInformation = document.getElementById("filmInformation")
+  divFilmInformation.removeChild(divFilmInformation.firstChild)
+  divFilmInformation.appendChild(filmInformation)
 }
 
 // export function getCharacterDiv(people) { //<--- Creando contenedor html para las personajes
