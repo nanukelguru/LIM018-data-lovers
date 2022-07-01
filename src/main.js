@@ -1,4 +1,4 @@
-import {showFilms, sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, showFilmsInformation, getInformationDiv} from './data.js';
+import { showFilms, sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, showFilmsInformation} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // let dataFilms;             //<----Jalando toda la Data desde archivo json
@@ -7,77 +7,128 @@ import data from './data/ghibli/ghibli.js';
 // .then(data=>{
 //   dataFilms = data.films;
 
-let linkPeliculas = document.getElementById("linkPeliculas")
-let linkInicio = document.getElementById("linkInicio2")
-let home = document.getElementById("home")
-let films1 = document.getElementById("films")
+const linkPeliculas = document.getElementById("linkPeliculas")
+const linkInicio = document.getElementById("linkInicio")
+const linkPersonajes = document.getElementById("linkPersonajes")
+const linkCriaturas = document.getElementById("linkCriaturas")
+const linkStats = document.getElementById("linkEstadisticas")
 
-linkPeliculas.addEventListener('click',() => { // <---- Mostrar seccion Peliculas
+const home = document.getElementById("home")
+const films = document.getElementById("films")
+const personajes = document.getElementById("personajes")
+const criaturas = document.getElementById("criaturas")
+const estadisticas = document.getElementById("estadisticas")
+
+
+linkPeliculas.addEventListener('click', () => { // <---- Mostrar Peliculas
     home.style.display = "none";
-    films1.style.display = "inline";
+    personajes.style.display = "none";
+    criaturas.style.display = "none";
+    estadisticas.style.display = "none";
+    films.style.display = "inline";
 })
 
 linkInicio.addEventListener('click', () => { //<---- Mostrar Inicio
     home.style.display = "inline";
-    films1.style.display="none";
-   
+    personajes.style.display = "none";
+    criaturas.style.display = "none";
+    estadisticas.style.display = "none";
+    films.style.display = "none";
 })
 
-showFilms(data.films) //----> Mostrando las peliculas
+linkPersonajes.addEventListener("click", () => { //<---- Mostrar Personajes
+    home.style.display = "none";
+    films.style.display = "none";
+    criaturas.style.display = "none";
+    estadisticas.style.display = "none";
+    personajes.style.display = "inline";
+})
+
+linkCriaturas.addEventListener("click", () => { //<---- Mostrar Criaturas
+    home.style.display = "none";
+    films.style.display = "none";
+    criaturas.style.display = "inline";
+    estadisticas.style.display = "none";
+    personajes.style.display = "none";
+})
+
+linkStats.addEventListener("click", () => { //<---- Mostrar Stats
+    home.style.display = "none";
+    films.style.display = "none";
+    criaturas.style.display = "none";
+    estadisticas.style.display = "inline";
+    personajes.style.display = "none";
+})
+
+
+showFilms(data.films) //----> Mostrando cards de peliculas
+
+const inputSearch = document.getElementById("searchFilms")
+
+inputSearch.addEventListener("keyup", e => {   //----> Funcionalidad de la busqueda
+    let resultSearch = data.films.filter((film) => {
+        return film.title.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+    showFilms(resultSearch);
+    
+});
+
 
 let popularidad = document.getElementById("Popularidad") //-----> Ordenando las peliculas por popularidad
-popularidad.addEventListener("click", function(){
+popularidad.addEventListener("click", function () {
     showFilms(sortBy(data.films))
 })
 
 let AZ = document.getElementById("AZ"); //----> Ordenando de la A-Z
-AZ.addEventListener("click", function(){
+AZ.addEventListener("click", function () {
     showFilms(sortAz(data.films))
 })
 
 let ZA = document.getElementById("ZA"); //----> Ordenando de la Z-A
-ZA.addEventListener("click", function(){
+ZA.addEventListener("click", function () {
     showFilms(sortZa(data.films))
 })
 
 let masAntiguo = document.getElementById("masAntiguo"); //----> Ordenando por más antiguo 
-masAntiguo.addEventListener("click", function(){
+masAntiguo.addEventListener("click", function () {
     showFilms(sortOldest(data.films))
 })
 
 let menosAntiguo = document.getElementById("menosAntiguo"); //----> Ordenando por menos antiguo 
-menosAntiguo.addEventListener("click", function(){
+menosAntiguo.addEventListener("click", function () {
     showFilms(sortLessOld(data.films))
 })
 
-let byDirector = document.getElementById("directores");
-console.log(byDirector)
+let byDirector = document.getElementById("directores"); //----> Filtrando por Director
+byDirector.addEventListener("click", function (event) {
+    const director = event.target.innerHTML
+    showFilms(filterByDirector(data.films, director))
+})
 
-byDirector.addEventListener("click", function(event){
-        console.log(event.target)
-    showFilms(filterByDirector(data.films))
+let byProducer = document.getElementById("productores"); //----> Filtrando por Productor
+byProducer.addEventListener("click", function (event) {
+    const productor = event.target.innerHTML
+    showFilms(filterByProductor(data.films, productor))
+})
+
+let showInformation = document.querySelectorAll(".filmposter");
+showInformation.forEach(film => {
+    film.addEventListener("click", function (event) {
+        const title = event.target.id
+        showFilmsInformation(data.films, title) //----> Mostrando la informacion de las peliculas
     })
+})
 
 
-// console.log(filterByDirector(data.films))
 
 
-// let showInformation = document.querySelectorAll(".filmposter"); 
-// console.log(showInformation)
-// showInformation.forEach(film =>{
-// film.addEventListener("click", function(event){
-//         console.log(event.target.id)
-//         showFilmsInformation(event.target.id) //----> Mostrando la informacion de las peliculas
-//     })
-// })
 
 
-// const directores = data.films.map(function(dataFilms){ 
+
+
+
+// const directores = data.films.map(function(dataFilms){
 //         return dataFilms.director
 // })
 // console.log(directores)
 
-// const productores = data.films.filter(function(film){
-//     return film.producer === "Hayao Miyazaki"
-// })
-// console.log(productores)
