@@ -10,88 +10,135 @@
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Indie+Flower&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/images/totoro.png">
 </head>
 
 <body>
 
-  <article id="home">
-    <section class="encabezado">
-      <header>
-        <img src="images/Totoro encabezado.png" alt="Encabezado">
-        <img id="ghibliLovers" src="images/logo Ghibli lovers.png" alt="Ghibli lovers">
-        <nav>
-          <a href="#" id="linkInicio">INICIO</a>
-          <a href="#" id="linkPeliculas">PELICULAS</a>
-          <a href="#" id="linkCreadores">CREADORES</a>
-          <a href="#" id="linkPersonajes">PERSONAJES</a>
-          <a href="#" id="linkCriaturas">CRIATURAS</a>
-          <input type="search" placeholder="Buscar..." name="buscador">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </nav>
-      </header>
-    </section>
-
-    <section class="inicio">
-      <div><img src="images/ghibli gif.gif" alt="Ghibli logo"></div>
-      <div>
-        <p>Studio Ghibli スタジオジブリ, es un estudio japonés de animación, considerado por la crítica especializada y muchos
-          cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad. <br> El estudio es
-          conocido
-          por sus largometrajes animados y también ha producido varios cortometrajes, comerciales de televisión y una
-          película
-          para televisión. Fue fundado el 15 de junio de 1985 por los directores Hayao Miyazaki e Isao Takahata y el
-          productor
-          Toshio Suzuki , después del éxito de la película de anime de Topcraft Nausicaä del Valle del Viento (1984).
-        </p>
-      </div>
-    </section>
-  </article>
-
-  <article id="films" style="display: none;">
-
-    <section class="encabezado">
-      <header>
-        <img id="imagenEncabezado" src="images/totoro gif.gif">
-        <img id="ghibliLovers2" src="images/logo Ghibli lovers.png" alt="Ghibli lovers">
-        
-        <nav>
-          <a href="#" id="linkInicio2">INICIO</a>
-          <a href="#" id="linkPeliculas2">PELICULAS</a>
-          <a href="#" id="linkCreadores2">CREADORES</a>
-          <a href="#" id="linkPersonajes2">PERSONAJES</a>
-          <a href="#" id="linkCriaturas2">CRIATURAS</a>
-          <input type="search" placeholder="Buscar..." name="buscador">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </nav>
-      </header>
-    </section>
-
-    <section class="peliculas">
+  <section class="encabezado">
+    <header>
+      <img src="images/Totoro encabezado.png" alt="Encabezado">
+      <img id="ghibliLovers" src="images/logo Ghibli lovers.png" alt="Ghibli lovers">
       <nav>
-        <h3>Ordenar por:</h3>
+        <a href="#" id="linkInicio">HOME</a>
+        <a href="#" id="linkPeliculas">FILMS</a>
+        <a href="#" id="linkPersonajes">CHARACTERS</a>
+        <a href="#" id="linkCriaturas">CREATURES</a>
+        <a href="#" id="linkEstadisticas">STATS</a>
+        <section class = "search-bar">
+          <button type="submit"><i class="fa fa-search" class ="iconSearch" aria-label="submit search"></i></button>
+          <input type="text" id = "searchFilms" class ="inputSearch" placeholder="Search" aria-label="search" name="buscador">
+        </section>
+
+      </nav>
+    </header>
+  </section>
+
+  <section id="home" class="inicio">
+    <div><img src="images/ghibli gif.gif" alt="Ghibli logo"></div>
+    <div>
+      <p><b>Studio Ghibli スタジオジブリ</b>, is a Japanese animation film studio headquartered in Koganei, Tokyo. It is best known
+        for its animated feature films, and has also produced several short subjects, television commercials, and two
+        television films. Its mascot and most recognizable symbol is a character named <b>Totoro</b>, a giant catlike spirit
+        from the 1988 anime film My Neighbor Totoro.
+        The studio was founded on June 15, 1985, by directors Hayao Miyazaki
+        and Isao Takahata and producer Toshio Suzuki. The name <b>"Ghibli"</b> was chosen by Miyazaki from the Italian noun
+        ghibli, based on the Libyan Arabic name for hot desert wind, the idea
+        being the studio would "blow a new wind through the anime industry". Although the Italian word would be more
+        accurately transliterated as "Giburi"
+        (ギブリ), with a hard g sound, the studio is romanised in Japanese as Jiburi (ジブリ
+      </p>
+    </div>
+  </section>
+
+  <section id="films" class="peliculas" style="display: none;">
+    <nav>
+      <div class="navegador" id="ordenar">
+        <h3>Order by:</h3>
         <ul>
-          <li id="Popularidad">Popularidad</li>
+          <li id="Popularidad">Popularity</li>
           <li id="AZ">A-Z</li>
           <li id="ZA">Z-A</li>
-          <li id="masAntiguo">Más antiguo</li>
-          <li id="menosAntiguo">Menos antiguo</li>
-
+          <li id="masAntiguo">Oldest</li>
+          <li id="menosAntiguo">Newest</li>
         </ul>
-      </nav>
+      </div>
 
-      <h1>Películas</h2>
+      <div class="navegador" id="filtrar">
+        <h3>Filter by:</h3>
+        <ul>
+          <li id="Director">Director</li>
+          <ul id="directores" class="lista directores">
+            <li>Hayao Miyazaki</li>
+            <li>Isao Takahata</li>
+            <li>Yoshifumi Kondō</li>
+            <li>Hiroyuki Morita</li>
+            <li>Gorō Miyazaki</li>
+            <li>Hiromasa Yonebayashi</li>
+          </ul>
+          <li id="Productor">Producer</li>
+          <ul id="productores" class="lista productores">
+            <li>Isao Takahata</li>
+            <li>Hayao Miyazaki</li>
+            <li>Toru Hara</li>
+            <li>Toshio Suzuki</li>
+            <li>Yoshiaki Nishimura</li>
 
-      <main class="posters">
+          </ul>
+        </ul>
+      </div>
+    </nav>
 
-        <div class="cards" id="filmCards">
+    <main class="posters">
+
+      <h1>Films</h1>
+
+      <div class="cards" id="filmCards">
+        <div id="filmInformation">
         </div>
+      </div>
 
-      </main>
-  </article>
+    </main>
   </section>
 
-  <section id="Creadores">
+  <section id="personajes" class="personajes" style="display: none;">
+    <nav>
+      <div class="navegador" id="ordenar">
+        <h3>Order by:</h3>
+        <ul>
+          <li id="AZ">A-Z</li>
+          <li id="ZA">Z-A</li>
+        </ul>
+      </div>
+
+      <div class="navegador" id="filtrar">
+        <h3>Filter by film:</h3>
+        <ul id="peliculas" class="lista peliculas">
+          <li>Castle in the sky</li>
+          <li>From up on Poppy Hill</li>
+          <li>Grave of the fireflies</li>
+          <li>Howl's Moving Castle</li>
+          <li>Kiki's Delivery Service</li>
+          <li>My Neighbor Totoro</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="posters">
+
+      <h1>Characters</h1>
+      <div class="card" id="characters">
+      </div>
+    </main>
+
   </section>
+
+  <section id="criaturas" class="criaturas" style="display: none;">
+  </section>
+
+  <section id="estadisticas" class="estadisticas" style="display: none;">
+  </section>
+
 
   <footer>
     Created by Fiorella Amaya & Angelica Lopez
