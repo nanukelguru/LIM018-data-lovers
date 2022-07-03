@@ -1,23 +1,28 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortBy } from '../src/data.js';
 
 
-describe('example', () => {
+describe('sortBy', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof sortBy).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  const filmTest = [{title: "Only Yesterday", "rt_score": "100"}]
+
+  it('shows the score result for the film `Only Yesterday`', () => {
+    expect(sortBy(filmTest,`score`)).toEqual([{"rt_score": "100", title: "Only Yesterday"}]);
   });
+
+
+  
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });
