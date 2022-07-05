@@ -1,8 +1,8 @@
 export function getFilmDiv(film) { //<--- Creando contenedor html para las peliculas
   return `<div class="card" >
-      <img id="${film.title}" class=filmposter src="${film.poster}" alt="imagen">
-      <img id="star" src="images/estrellita.png">
-      <p id="score">${film.rt_score}</p>
+      <img id="${film.title}" class="filmposter" src="${film.poster}" alt="imagen">
+      <img class="star" src="images/estrellita.png">
+      <p class="score">${film.rt_score}</p>
       <h2>${film.title}</h2>
       <p>${film.release_date}</p>
       </div>`
@@ -67,18 +67,19 @@ export function filterByProductor(films, productor) {
 export function getInformationDiv(film) {
   const filmInformation = document.createElement("div");
   filmInformation.innerHTML = `<div class="ventanamodal">
-  <aside class= modalPoster><img src="${film.poster}"></aside>
-  <aside class = modalSynopsis>
+  <aside class= "modalPoster"><img src="${film.poster}"></aside>
+  <aside class = "modalSynopsis">
+
    <h2>${film.title}</h2>
-   <p>${film.description}</p>
    <h3>${film.release_date}</h3>
-   </aside>
+   <p>${film.description}</p>
+  </aside>
    </div>`
-   
+
   const divFilmInformation = document.getElementById("filmInformation")
   divFilmInformation.removeChild(divFilmInformation.firstChild)
   divFilmInformation.appendChild(filmInformation)
-  
+
 }
 
 // export function getCharacterDiv(people) { //<--- Creando contenedor html para las personajes

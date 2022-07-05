@@ -22,8 +22,6 @@
       <nav>
         <a href="#" id="linkInicio">HOME</a>
         <a href="#" id="linkPeliculas">FILMS</a>
-        <a href="#" id="linkPersonajes">CHARACTERS</a>
-        <a href="#" id="linkCriaturas">CREATURES</a>
         <a href="#" id="linkEstadisticas">STATS</a>
         <section class="search-bar">
           <button type="submit"><i class="fa fa-search"  aria-label="submit search"></i></button>
@@ -56,6 +54,9 @@
   </section>
 
   <section id="films" class="peliculas" style="display: none;">
+    <div  class ="modalContainer" id="filmInformation" style="display:none">
+      <p id="close">X</p>
+    </div>
     <nav>
       <div class="navegador" id="ordenar">
         <h3>Order by:</h3>
@@ -96,8 +97,7 @@
     <main class="posters">
 
       <h1>Films</h1>
-      <div  class ="modalContainer" id="filmInformation">
-      </div>
+      
       <div class="cards" id="filmCards">
       </div>
 

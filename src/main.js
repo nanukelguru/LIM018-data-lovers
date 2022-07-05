@@ -9,55 +9,29 @@ import data from './data/ghibli/ghibli.js';
 
 const linkPeliculas = document.getElementById("linkPeliculas")
 const linkInicio = document.getElementById("linkInicio")
-const linkPersonajes = document.getElementById("linkPersonajes")
-const linkCriaturas = document.getElementById("linkCriaturas")
 const linkStats = document.getElementById("linkEstadisticas")
 
 const home = document.getElementById("home")
 const films = document.getElementById("films")
-const personajes = document.getElementById("personajes")
-const criaturas = document.getElementById("criaturas")
 const estadisticas = document.getElementById("estadisticas")
 
 
 linkPeliculas.addEventListener('click', () => { // <---- Mostrar Peliculas
     home.style.display = "none";
-    personajes.style.display = "none";
-    criaturas.style.display = "none";
     estadisticas.style.display = "none";
     films.style.display = "inline";
 })
 
 linkInicio.addEventListener('click', () => { //<---- Mostrar Inicio
     home.style.display = "inline";
-    personajes.style.display = "none";
-    criaturas.style.display = "none";
     estadisticas.style.display = "none";
     films.style.display = "none";
-})
-
-linkPersonajes.addEventListener("click", () => { //<---- Mostrar Personajes
-    home.style.display = "none";
-    films.style.display = "none";
-    criaturas.style.display = "none";
-    estadisticas.style.display = "none";
-    personajes.style.display = "inline";
-})
-
-linkCriaturas.addEventListener("click", () => { //<---- Mostrar Criaturas
-    home.style.display = "none";
-    films.style.display = "none";
-    criaturas.style.display = "inline";
-    estadisticas.style.display = "none";
-    personajes.style.display = "none";
 })
 
 linkStats.addEventListener("click", () => { //<---- Mostrar Stats
     home.style.display = "none";
     films.style.display = "none";
-    criaturas.style.display = "none";
     estadisticas.style.display = "inline";
-    personajes.style.display = "none";
 })
 
 
@@ -115,12 +89,21 @@ let showInformation = document.querySelectorAll(".filmposter");
 showInformation.forEach(film => {
     film.addEventListener("click", function (event) {
         const title = event.target.id
+        const filmInformation = document.getElementById("filmInformation")
+        filmInformation.style.display="flex";
         getInformationDiv(data.films.find((film)=> film.title === title )) //----> Mostrando la informacion de las peliculas
     })
 })
+const filmInformation =document.getElementById("filmInformation");
+console.log(filmInformation)
+const close = document.getElementById("close");
+console.log(close)
+close.addEventListener("click", function(){
+    // filmInformation.classList.toggle("modalContainer")
+    // filmInformation.style.display = "none"
+    filmInformation.removeChild(filmInformation.firstChild)
 
-
-
+})
 
 
 
