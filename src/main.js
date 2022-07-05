@@ -47,7 +47,6 @@ inputSearch.addEventListener("keyup", e => {   //----> Funcionalidad de la busqu
     
 });
 
-
 let popularidad = document.getElementById("Popularidad") //-----> Ordenando las peliculas por popularidad
 popularidad.addEventListener("click", function () {
     showFilms(sortBy(data.films))
@@ -86,24 +85,40 @@ byProducer.addEventListener("click", function (event) {
 })
 
 let showInformation = document.querySelectorAll(".filmposter");
-showInformation.forEach(film => {
+
+
+function ventanaModal () {console.log(showInformation)
+    showInformation.forEach(film => {
+    
     film.addEventListener("click", function (event) {
         const title = event.target.id
         const filmInformation = document.getElementById("filmInformation")
         filmInformation.style.display="flex";
         getInformationDiv(data.films.find((film)=> film.title === title )) //----> Mostrando la informacion de las peliculas
+        const close = document.querySelector(".close");
+        close.addEventListener("click", function(){
+            filmInformation.style.display = "none"
+        }) 
     })
 })
-const filmInformation =document.getElementById("filmInformation");
-console.log(filmInformation)
-const close = document.getElementById("close");
-console.log(close)
-close.addEventListener("click", function(){
-    // filmInformation.classList.toggle("modalContainer")
-    // filmInformation.style.display = "none"
-    filmInformation.removeChild(filmInformation.firstChild)
+}
+ventanaModal()
 
-})
+
+
+// let showCharacters = document.querySelectorAll(".btnMoreInfo");
+// showCharacters.forEach(film => {
+//     film.addEventListener("click", function (event) {
+//         const title = event.target.id
+//         getCharacterDiv(data.films.find((film)=> film.title === title )) //----> Mostrando la informacion de las peliculas
+//     })
+// })
+
+
+
+
+
+
 
 
 

@@ -69,28 +69,29 @@ export function getInformationDiv(film) {
   filmInformation.innerHTML = `<div class="ventanamodal">
   <aside class= "modalPoster"><img src="${film.poster}"></aside>
   <aside class = "modalSynopsis">
-
    <h2>${film.title}</h2>
+   <p class="close">X</p>
    <h3>${film.release_date}</h3>
    <p>${film.description}</p>
-  </aside>
+   
+    </aside>
    </div>`
 
   const divFilmInformation = document.getElementById("filmInformation")
   divFilmInformation.removeChild(divFilmInformation.firstChild)
   divFilmInformation.appendChild(filmInformation)
-
 }
 
 // export function getCharacterDiv(people) { //<--- Creando contenedor html para las personajes
-//   return `<div class="card" >
+//   const characterCards = document.getElementById("charactersCards") 
+//   characterCards.innerHTML = `<div class="card" >
 //       <img id="${people.name}" src="${people.img}" alt="imagen">
 //       <h2>${people.name}</h2>
 //       </div>`
 // }
 
 // export function showCharacters(dataFilms) {
-//   const characterCards = document.getElementById("characters") //<-- Llamando al contenedor de html
+//   const characterCards = document.getElementById("charactersCards") //<-- Llamando al contenedor de html
 //   characterCards.innerHTML = '';
 //   dataFilms.forEach(character => {
 //     characterCards.innerHTML += getCharacterDiv(character)

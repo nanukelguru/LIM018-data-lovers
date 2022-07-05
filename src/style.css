@@ -225,7 +225,6 @@ h3 {
     font-weight: bold;
     right: 24px;
     margin-top: -35px;
-
 }
 
 .card {
@@ -240,8 +239,8 @@ h3 {
     height: 40px;
     padding-top: 105%;
     right: 10px;
-
 }
+
 .modalContainer{
     /* visibility: hidden; */
     position: fixed;
@@ -257,6 +256,7 @@ h3 {
 }
 
 .ventanamodal{
+    position: relative;
     overflow: hidden;
     max-width: 1100px;
     max-height: 1000px;
@@ -280,7 +280,6 @@ h3 {
 .modalSynopsis{
     width: 70%;
     display: inline-block;
-  
 }
 
 .ventanamodal h2{
@@ -290,6 +289,7 @@ h3 {
     margin:3px 0;
     margin-left: 80px;
 }
+
 .ventanamodal p{
     font-family: 'Comic Neue';
     font-size: 18px;
@@ -297,20 +297,25 @@ h3 {
     text-align: justify;
     width: 95%;
     margin-left: 80px;
-   
 }
 .ventanamodal .close{
-    top: 5px;
-    right: 5px;
-    display: inline-block;
-    background:#D9D9D9;
-    border-radius: 50%;
+    font-weight:bold;
+    font-size: 20px;
+    text-align: center;
+    background:#8D876F;
+    width: 25px;
+    position: absolute;
+    top: 0px;
+    right: 13px;
+
+    border-radius: 10px;
+   
     /* width: auto;
     background: none;
     border: none;
     outline: none;
     cursor: pointer; */
-  }
+}
 
 footer {
     text-align: center;
