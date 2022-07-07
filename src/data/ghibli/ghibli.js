@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://static1.personality-database.com/profile_images/2a63e0f6078448d9a1890561ccb40992.png",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -448,7 +448,7 @@ export default {
         {
           "id": "62346d33-caa0-4c17-8016-0aca56f3066b",
           "name": "Karikiya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e3/Majo002.jpg",
+          "img": "https://i.pinimg.com/564x/01/fe/9b/01fe9b86366136f3c0e0b6bdc718cd7a.jpg",
           "climate": "Mild",
           "terrain": "City",
           "surface_water": "30",
@@ -510,7 +510,7 @@ export default {
         {
           "id": "227c01a6-4e29-4582-bc4b-35106a704ab0",
           "name": "Mrs. Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/39/SeitaMother.png",
+          "img": "https://cdn.myanimelist.net/images/characters/6/423031.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Black",
@@ -520,7 +520,7 @@ export default {
         {
           "id": "023306e3-9fc6-4d1d-b681-d4649dcbfff9",
           "name": "Kiyoshi Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f6/SeitaFather3.jpg",
+          "img": "https://static.wikia.nocookie.net/studioghibli/images/e/e4/Kiyoshi_Yokokawa.jpg/revision/latest?cb=20200629051742&path-prefix=es",
           "gender": "Male",
           "age": "40",
           "eye_color": "Black",
@@ -2330,7 +2330,7 @@ export default {
         {
           "id": "28d07ace-c309-48c6-b48e-ae2ece3a238c",
           "name": "Anna Sasaki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/ae/Anna.png",
+          "img": "https://www.personality-database.com/profile_images/9514.png",
           "gender": "Female",
           "age": "12",
           "eye_color": "Blue",

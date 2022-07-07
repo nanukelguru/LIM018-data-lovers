@@ -1,3 +1,8 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
 body {
     background: #E7E1C9;
     cursor: url(images/susuwatari.cur), auto;
@@ -20,33 +25,36 @@ button {
 }
 
 .encabezado {
-    max-width: 1350px;
+    width: 90%;
+    position: relative;
 }
 
 .encabezado img {
-    width: 500px;
+    width: 45%;
     margin-left: 35%;
 }
 
 #ghibliLovers {
     position: absolute;
-    width: 350px;
-    padding-top: 2%;
-    right: 22%;
+    width: 29%;
+    padding-top: 1%;
+    right: 16%;
 }
 
-@media (max-width: 780px) {
-    .encabezado nav {
-        flex-direction: column;
-    }
+#menu {
+    position: absolute;
+    top: 10%;
+    width: 10%;
+    right: -10%;
+    display: none;
 }
 
-.encabezado nav {
+.encabezadoNav {
     display: flex;
     font-family: 'Indie Flower';
     font-size: 25px;
     background: #8D876F;
-    height: 40px;
+    height: 4%;
     align-items: center;
     justify-content: space-between;
     padding-right: 4%;
@@ -63,7 +71,7 @@ button {
 .encabezado a:hover {
     background: #E7E1C9;
     color: #0c0c0b;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -80,7 +88,7 @@ button {
     background: #ffffff;
 }
 
-.search-bar{
+.search-bar {
     border: 1px solid #E7E1C9;
     display: flex;
     border-radius: 5px;
@@ -88,35 +96,33 @@ button {
 
 .inicio {
     display: flex;
+    justify-content: space-between;
     padding: 5%;
 }
 
 .inicio img {
-    width: 500px;
-    /* background-color: coral; */
-    margin: 20px 50px 0 50px;
+    justify-content: center;
+    width: 480px;
+    margin: 0px 50px 0 50px;
     border-radius: 15px;
 }
 
 .inicio p {
     font-family: 'Comic Neue';
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
-    /* background-color: aquamarine; */
-    line-height: 36px;
-    vertical-align: middle;
-    margin: 0 50px 0 20px;
+    line-height: 25px;
+    margin: 0 20px 0 20px;
 }
 
 .peliculas {
-    /* background-color: green; */
     width: auto;
     margin: 0 auto;
 }
 
 .peliculas nav {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 24px;
     float: left;
 }
 
@@ -127,12 +133,15 @@ ul {
 .navegador {
     font-family: 'Comic Neue';
     background-color: #D9D9D9;
-    width: 200px;
-    height: 240px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
-    padding: 1px 5px 5px 10px;
-    margin: 80px 5px 5px 30px;
+    width: 80%;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.30);
+    padding: 20px 5px 5px 0px;
+    margin: 60px 5px 5px 30px;
     border-radius: 20px;
+}
+
+.navegador h3 {
+    line-height: 50px;
 }
 
 .navegador:hover {
@@ -145,14 +154,9 @@ li:hover {
     color: #ffffff;
 }
 
-#filtrar {
-    height: 480px;
-}
-
 .lista {
-    font-size: 15px;
+    font-size: 14px;
 }
-
 
 .lista li:hover {
     font-size: 16px;
@@ -175,12 +179,10 @@ h3 {
 
 
 .posters {
-    /* background-color:mediumvioletred; */
     display: flex;
     flex-wrap: wrap;
-    padding: 5px 20px 20px 60px;
-    margin: auto;
-    width: 72%;
+    padding: 10px 20px 20px 70px;
+    width: 75%;
 
 }
 
@@ -188,7 +190,6 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .cards img {
@@ -201,30 +202,29 @@ h3 {
 .filmposter:hover {
     width: 201px;
     height: 271px;
-     
+
 }
 
 .cards h2 {
     font-family: 'Indie Flower';
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-
-.card p {
-    font: size 18px;
+.cards p {
+    font: size 14px;
     font-family: 'Comic Neue';
     text-align: center;
-    line-height: 0px;
+    line-height: 20px;
 
 }
 
 .card .score {
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
     font-weight: bold;
-    right: 24px;
-    margin-top: -35px;
+    right: 23px;
+    margin-top: -37px;
 }
 
 .card {
@@ -237,17 +237,17 @@ h3 {
     position: absolute;
     width: 40px;
     height: 40px;
-    padding-top: 105%;
+    margin-top: 232px;
     right: 10px;
 }
 
-.modalContainer{
+.modalContainer {
     /* visibility: hidden; */
     position: fixed;
     z-index: 100;
     width: 100%;
     height: 100vh;
-    /* background:rgba(0, 0, 0, 0.30); */
+    background: rgba(0, 0, 0, 0.80);
     top: 0;
     left: 0;
     justify-content: center;
@@ -255,66 +255,124 @@ h3 {
 
 }
 
-.ventanamodal{
+.ventanamodal {
     position: relative;
-    overflow: hidden;
-    max-width: 1100px;
-    max-height: 1000px;
-    background:#D9D9D9;
-    border-radius: 10px;   
+    max-width: 1250px;
+    max-height: 600px;
+    background: #E7E1C9;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
     padding: 2% 3%;
-    width: 100%; 
+    width: 100%;
+    overflow-y: scroll;
+    transition: transform 1s;
+    transform: translateY(0%);
 }
 
-.modalPoster{
-    width: 200px;
-    height: 270px;
-    border-radius: 10px;
+.modalPoster {
+    width: 160px;
     padding: 2%;
     display: inline-block;
     width: 20%;
     vertical-align: top;
-    
 }
-.modalSynopsis{
-    width: 70%;
+
+.modalPoster img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.modalSynopsis {
+    width: 75%;
     display: inline-block;
 }
 
-.ventanamodal h2{
+.ventanamodal h2 {
     font-family: 'Indie Flower';
     font-size: 40px;
     text-align: center;
-    margin:3px 0;
-    margin-left: 80px;
 }
 
-.ventanamodal p{
+.ventanamodal p {
     font-family: 'Comic Neue';
     font-size: 18px;
     line-height: 1.3;
     text-align: justify;
     width: 95%;
-    margin-left: 80px;
 }
-.ventanamodal .close{
-    font-weight:bold;
+
+.ventanamodal .close {
+    font-weight: bold;
     font-size: 20px;
     text-align: center;
-    background:#8D876F;
+    background: #8D876F;
     width: 25px;
     position: absolute;
-    top: 0px;
+    top: 10px;
     right: 13px;
 
     border-radius: 10px;
-   
-    /* width: auto;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer; */
+}
+
+.charactersCards,
+.locationCards,
+.vehiclesCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 2%;
+    position: relative;
+}
+
+.card2 {
+    width: 130px;
+    margin: 2%;
+    /* backface-visibility: hidden; */
+
+}
+
+.card2 img {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    border-radius: 5%;
+    transform: rotateY(0deg);
+    transition: all .5s;
+    transform-style: preserve-3d ;
+    
+}
+
+.card2.back {
+    /* position: absolute; */
+    display: grid;
+    place-items: center;
+    background: #8D876F;
+    width: 150px;
+    height: 200px;
+    border-radius: 5%;
+    color: #f5f5ec;
+    padding: 2%;
+    /* transform: rotateY(180deg); */
+}
+
+.card2 img:hover{
+    transform: rotateY(-180deg);
+}
+
+.containerChart{
+    width: 40%;
+ 
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+}
+.containerChart{
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+}
+
+.canvasChart{
+    max-height: 300px;
 }
 
 footer {
@@ -322,4 +380,46 @@ footer {
     font-family: 'Indie Flower';
     font-size: 18px;
     font-weight: bold;
+}
+
+@media (max-width: 770px) {
+    #menu {
+        display: block;
+    }
+
+    .encabezadoNav {
+        background: #8D876F;
+        height: 30%;
+        flex-direction: column;
+        position: fixed;
+        margin: 0px;
+        left: 0;
+        top: 60px;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .navVisible {
+        left: 0;
+    }
+
+    .inicio {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .inicio img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 950px) {
+    .inicio img {
+        width: 320px;
+    }
 }

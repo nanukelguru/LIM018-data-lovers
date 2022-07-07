@@ -1,4 +1,8 @@
 import { sortBy } from '../src/data.js';
+import { showFilms } from '../src/main.js';
+import data from '../src/data/ghibli/ghibli.js';
+
+document.html.body.innerHTML = "<div id='filmCards'></div>"
 
 
 describe('sortBy', () => {
@@ -15,6 +19,12 @@ describe('sortBy', () => {
 
   
 });
+
+describe("showFilms",() => {
+  it("",() => {
+    showFilms(data.films)
+  })
+})
 
 
 // describe('anotherExample', () => {

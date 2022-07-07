@@ -19,7 +19,8 @@
     <header>
       <img src="images/Totoro encabezado.png" alt="Encabezado">
       <img id="ghibliLovers" src="images/logo Ghibli lovers.png" alt="Ghibli lovers">
-      <nav>
+      <img id="menu" src="images/Menu cellphone.png" alt="Menu">
+      <nav class="encabezadoNav navVisible">
         <a href="#" id="linkInicio">HOME</a>
         <a href="#" id="linkPeliculas">FILMS</a>
         <a href="#" id="linkEstadisticas">STATS</a>
@@ -113,6 +114,9 @@
 
 
   <section id="estadisticas" class="estadisticas" style="display: none;">
+    <section class = "containerChart">
+      <canvas id="myChart" class="canvasChart" width="2" height="2"></canvas>
+    </section>
   </section>
 
 
@@ -122,6 +126,7 @@
     Created by Fiorella Amaya &amp Angelica Lopez
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
   <script src="main.js" type="module"></script>
 </body>
 

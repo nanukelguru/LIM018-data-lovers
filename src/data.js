@@ -8,14 +8,6 @@ export function getFilmDiv(film) { //<--- Creando contenedor html para las pelic
       </div>`
 }
 
-export function showFilms(dataFilms) {
-  const filmCards = document.getElementById("filmCards") //<-- Llamando al contenedor de html
-  filmCards.innerHTML = '';
-  dataFilms.forEach(film => {
-    filmCards.innerHTML += getFilmDiv(film)
-  })
-}
-
 // Funciones para Ordenar Peliculas:
 
 export function sortBy(films) {
@@ -62,38 +54,14 @@ export function filterByProductor(films, productor) {
   })
 }
 
-// Funciones para mostrar informacion de las peliculas en ventana modal:
-
-export function getInformationDiv(film) {
-  const filmInformation = document.createElement("div");
-  filmInformation.innerHTML = `<div class="ventanamodal">
-  <aside class= "modalPoster"><img src="${film.poster}"></aside>
-  <aside class = "modalSynopsis">
-   <h2>${film.title}</h2>
-   <p class="close">X</p>
-   <h3>${film.release_date}</h3>
-   <p>${film.description}</p>
-   
-    </aside>
-   </div>`
-
-  const divFilmInformation = document.getElementById("filmInformation")
-  divFilmInformation.removeChild(divFilmInformation.firstChild)
-  divFilmInformation.appendChild(filmInformation)
+export function top10Films(films) {
+  let scores = films.map(item => [item.title, item.rt_score]);
+  //console.log(scores)
+  scores.sort((a, b) => b[1] - a[1]);
+  let films10 = [], scores10 = [];
+  for (let i = 0; i < 10; i++) {
+    films10[i] = scores[i][0];
+    scores10[i] = scores[i][1];
+  }
+  return [films10, scores10];
 }
-
-// export function getCharacterDiv(people) { //<--- Creando contenedor html para las personajes
-//   const characterCards = document.getElementById("charactersCards") 
-//   characterCards.innerHTML = `<div class="card" >
-//       <img id="${people.name}" src="${people.img}" alt="imagen">
-//       <h2>${people.name}</h2>
-//       </div>`
-// }
-
-// export function showCharacters(dataFilms) {
-//   const characterCards = document.getElementById("charactersCards") //<-- Llamando al contenedor de html
-//   characterCards.innerHTML = '';
-//   dataFilms.forEach(character => {
-//     characterCards.innerHTML += getCharacterDiv(character)
-//   })
-// }
