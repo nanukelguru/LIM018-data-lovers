@@ -1,4 +1,4 @@
-import { getFilmDiv, sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, top10Films} from './data.js';
+import {sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, top10Films } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // let dataFilms;             //<----Jalando toda la Data desde archivo json
@@ -28,7 +28,7 @@ linkPeliculas.addEventListener('click', () => { // <---- Mostrar Peliculas
 })
 
 linkInicio.addEventListener('click', () => { //<---- Mostrar Inicio
-    home.style.display = "inline";
+    home.style.display = "flex";
     estadisticas.style.display = "none";
     films.style.display = "none";
 })
@@ -38,6 +38,16 @@ linkStats.addEventListener("click", () => { //<---- Mostrar Stats
     films.style.display = "none";
     estadisticas.style.display = "inline";
 })
+
+function getFilmDiv(film) { //<--- Creando contenedor html para las peliculas
+    return `<div class="card" >
+        <img id="${film.title}" class="filmposter" src="${film.poster}" alt="imagen">
+        <img class="star" src="images/estrellita.png">
+        <p class="score">${film.rt_score}</p>
+        <h2>${film.title}</h2>
+        <p>${film.release_date}</p>
+        </div>`
+  }
 
 function showFilms(dataFilms) {
     const filmCards = document.getElementById("filmCards") //<-- Llamando al contenedor de html
@@ -103,7 +113,7 @@ function modal(dataFilms) {
             close.addEventListener("click", function () {      //----> Funcionalidad de boton close
                 filmInformation.style.display = "none"
                 filmInformation.style.opacity = "0"
-                
+
             })
         })
     })
@@ -114,26 +124,29 @@ function modal(dataFilms) {
 function showCharacters(dataPeople, modal) {        //------> Funcion para mostrar los personajes
     const character = modal.querySelector(".charactersCards")
     dataPeople.forEach(people => {
-        character.innerHTML += 
-        `<div class="card2 front" >
+        character.innerHTML +=
+            `<div class="flipCard" >
+         <div class="card2 front" >
          <img id="${people.name}" src="${people.img}" alt="imagen">
          </div>
-        <div class="card2 back" >
+         <div class="card2 back" >
             <p><b>Name:</b>${people.name}<br>
             <b>Gender:</b>${people.gender}<br>
             <b>Age:</b>${people.age}<br>
             <b>Specie:</b>${people.specie}<br>
             </p>
+         </div>
          </div>`
-         
-       })
+
+    })
 }
 
 function showLocations(dataLocations, modal) {        //------> Funcion para mostrar locations
     const location = modal.querySelector(".locationCards")
     dataLocations.forEach(locations => {
-        location.innerHTML += 
-        `<div class= "card2 front">
+        location.innerHTML +=
+            `<div class="flipCard">
+            <div class= "card2 front">
         <img id="${locations.name}" src="${locations.img}" alt="imagen">
         </div>
         <div class="card2 back" >
@@ -141,6 +154,7 @@ function showLocations(dataLocations, modal) {        //------> Funcion para mos
             <b>Climate:</b>${locations.climate}<br>
             <b>Terrain:</b>${locations.terrain}<br>
             </p>
+            </div>
             </div>`
     })
 }
@@ -149,15 +163,17 @@ function showVehicles(dataVehicles, modal) {        //------> Funcion para mostr
     const vehicles = modal.querySelector(".vehiclesCards")
     dataVehicles.forEach(vehicle => {
         vehicles.innerHTML +=
-            `<div class="card2 front" >
+            `<div class="flipCard">
+            <div class="card2 front" >
             <img id="${vehicle.name}" src="${vehicle.img}" alt="imagen">
             </div>
             <div class="card2 back" >
             <p><b>${vehicle.name}</b><br>
             ${vehicle.description}</p>
+            </div>
             </div>`
     })
-   
+
 }
 
 const inputSearch = document.getElementById("searchFilms")
@@ -208,17 +224,21 @@ byProducer.addEventListener("click", function (event) {
 const dataFilms = data.films
 
 let titleFilms = top10Films(dataFilms)
- //let scores = top10Films.map((x)=> x.rt_score);
+//let scores = top10Films.map((x)=> x.rt_score);
 
-const colors = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'orange','#C32BAD','#7027A0','#6ECB63','#3A6351','#1E3163', '#C84B31'];
+const colors = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'orange', '#C32BAD', '#7027A0', '#6ECB63', '#3A6351', '#1E3163', '#C84B31'];
 const ctx = document.getElementById("myChart").getContext("2d");
+<<<<<<< HEAD
 const myChart = new (ctx, {
+=======
+const myChart = new Chart(ctx, {
+>>>>>>> 634971db59309bcd97f90824e19181a669181b1f
     type: 'bar',
     data: {
         labels: titleFilms[0],
         datasets: [
             {
-                label:"films",
+                label: "films",
                 data: titleFilms[1],
                 backgroundColor: colors,
                 borderColor: [
@@ -226,7 +246,7 @@ const myChart = new (ctx, {
                 ]
             }
         ]
-        
+
     },
 });
 myChart;
