@@ -1,13 +1,3 @@
-export function getFilmDiv(film) { //<--- Creando contenedor html para las peliculas
-  return `<div class="card" >
-      <img id="${film.title}" class="filmposter" src="${film.poster}" alt="imagen">
-      <img class="star" src="images/estrellita.png">
-      <p class="score">${film.rt_score}</p>
-      <h2>${film.title}</h2>
-      <p>${film.release_date}</p>
-      </div>`
-}
-
 // Funciones para Ordenar Peliculas:
 
 export function sortBy(films) {

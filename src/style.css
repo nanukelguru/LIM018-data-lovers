@@ -177,19 +177,11 @@ h3 {
     text-align: center;
 }
 
-
-.posters {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 20px 20px 70px;
-    width: 75%;
-
-}
-
 .cards {
+    padding: 20px 20px 20px 60px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .cards img {
@@ -269,6 +261,15 @@ h3 {
     transform: translateY(0%);
 }
 
+.ventanamodal::-webkit-scrollbar {
+    width: 10px;
+}
+
+.ventanamodal::-webkit-scrollbar-thumb {
+    background-color: rgb(101, 95, 95);
+    border-radius: 10px;
+}
+
 .modalPoster {
     width: 160px;
     padding: 2%;
@@ -321,7 +322,13 @@ h3 {
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 2%;
+    
+}
+
+.flipCard{
     position: relative;
+
+
 }
 
 .card2 {
@@ -332,7 +339,6 @@ h3 {
 }
 
 .card2 img {
-    position: relative;
     width: 150px;
     height: 200px;
     border-radius: 5%;

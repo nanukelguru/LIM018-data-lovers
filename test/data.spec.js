@@ -1,8 +1,8 @@
 import { sortBy } from '../src/data.js';
-import { showFilms } from '../src/main.js';
-import data from '../src/data/ghibli/ghibli.js';
+// import { showFilms } from '../src/main.js';
+// import data from '../src/data/ghibli/ghibli.js';
 
-document.html.body.innerHTML = "<div id='filmCards'></div>"
+// document.html.body.innerHTML = "<div id='filmCards'></div>"
 
 
 describe('sortBy', () => {
@@ -10,21 +10,18 @@ describe('sortBy', () => {
     expect(typeof sortBy).toBe('function');
   });
 
-  const filmTest = [{title: "Only Yesterday", "rt_score": "100"}]
+  const filmTest = [{ title: "Only Yesterday", "rt_score": "100" }]
 
   it('shows the score result for the film `Only Yesterday`', () => {
-    expect(sortBy(filmTest,`score`)).toEqual([{"rt_score": "100", title: "Only Yesterday"}]);
+    expect(sortBy(filmTest, `score`)).toEqual([{ "rt_score": "100", title: "Only Yesterday" }]);
   });
-
-
-  
 });
 
-describe("showFilms",() => {
-  it("",() => {
-    showFilms(data.films)
-  })
-})
+// describe("showFilms",() => {
+//   it("",() => {
+//     showFilms(data.films)
+//   })
+// })
 
 
 // describe('anotherExample', () => {
