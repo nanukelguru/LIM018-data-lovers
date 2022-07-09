@@ -212,7 +212,7 @@ let titleFilms = top10Films(dataFilms)
 
 const colors = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'orange','#C32BAD','#7027A0','#6ECB63','#3A6351','#1E3163', '#C84B31'];
 const ctx = document.getElementById("myChart").getContext("2d");
-const myChart = new(ctx, {
+const myChart = new (ctx, {
     type: 'bar',
     data: {
         labels: titleFilms[0],

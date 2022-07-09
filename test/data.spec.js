@@ -19,12 +19,22 @@ describe('sortBy', () => {
 
   
 });
+describe('showFilms', () => {
+  document.body.innerHTML = "<div id='filmCards'></div>"
+  it('show films in page',() =>{
 
-describe("showFilms",() => {
-  it("",() => {
     showFilms(data.films)
+    let cards = document.querySelectorAll('.card');
+    expect(cards.length).toBe(20);
+
   })
 })
+
+// describe("showFilms",() => {
+//   it("",() => {
+//     showFilms(data.films)
+//   })
+// })
 
 
 // describe('anotherExample', () => {
