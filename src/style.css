@@ -327,7 +327,7 @@ h3 {
 
 .flipCard{
     position: relative;
-
+    padding: 2%;
 
 }
 
@@ -338,18 +338,20 @@ h3 {
 
 }
 
+.card2.front {
+    transform: rotateY(0deg);
+    transition: all .5s;
+}
+
 .card2 img {
     width: 150px;
     height: 200px;
     border-radius: 5%;
-    transform: rotateY(0deg);
-    transition: all .5s;
-    transform-style: preserve-3d ;
     
 }
 
 .card2.back {
-    /* position: absolute; */
+    position: absolute;
     display: grid;
     place-items: center;
     background: #8D876F;
@@ -358,10 +360,10 @@ h3 {
     border-radius: 5%;
     color: #f5f5ec;
     padding: 2%;
-    /* transform: rotateY(180deg); */
+    transform: rotateY(180deg);
 }
 
-.card2 img:hover{
+.card2 .front:hover{
     transform: rotateY(-180deg);
 }
 
