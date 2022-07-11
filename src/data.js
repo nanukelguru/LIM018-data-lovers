@@ -1,6 +1,6 @@
 // Funciones para Ordenar Peliculas:
 
-export function sortBy(films) {
+export function sortByScore(films) {
   return films.sort(function (a, b) {
     return b.rt_score - a.rt_score
   })
