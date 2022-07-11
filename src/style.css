@@ -366,19 +366,21 @@ h3 {
 }
 
 .containerChart{
-    width: 40%;
- 
+    width: 70%;
+    height: 70%;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 15px;
-}
-.containerChart{
-    width: 40%;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 15px;
+    margin:auto;
+    margin-top: 25px;
+    font-family: 'Comic Neue';
+    text-align: center;
+    font-size:xx-large;
+    padding: 25px;
 }
 
 .canvasChart{
     max-height: 300px;
+    display: flex; 
 }
 
 footer {

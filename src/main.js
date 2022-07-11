@@ -1,4 +1,4 @@
-import {sortBy, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, top10Films } from './data.js';
+import {sortByScore, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, top10Films } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // let dataFilms;             //<----Jalando toda la Data desde archivo json
@@ -186,7 +186,7 @@ inputSearch.addEventListener("keyup", e => {   //----> Funcionalidad de la busqu
 
 let popularidad = document.getElementById("Popularidad") //-----> Ordenando las peliculas por popularidad
 popularidad.addEventListener("click", function () {
-    showFilms(sortBy(data.films))
+    showFilms(sortByScore(data.films))
 })
 
 let AZ = document.getElementById("AZ"); //----> Ordenando de la A-Z
@@ -228,13 +228,14 @@ let titleFilms = top10Films(dataFilms)
 
 const colors = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'orange', '#C32BAD', '#7027A0', '#6ECB63', '#3A6351', '#1E3163', '#C84B31'];
 const ctx = document.getElementById("myChart").getContext("2d");
+// eslint-disable-next-line
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: titleFilms[0],
         datasets: [
             {
-                label: "films",
+                label: "Films",
                 data: titleFilms[1],
                 backgroundColor: colors,
                 borderColor: [
