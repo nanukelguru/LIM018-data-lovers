@@ -38,6 +38,46 @@ En esta página los usuarios podran visualizar las peliculas del estudio Ghibli 
 
 ### Historias de Usuario
 
+**Historia 1**
+Como: usuaria fan del studio Ghibli
+Quiero: una pagina web
+Para: poder visualizar toda la informacion de las peliculas del estudio.
+
+**Historia 2**
+Como: usuaria
+Quiero: una barra de navegacion
+Para: poder navegar por la pagina web
+
+**Historia 3**
+Como: usuaria
+Quiero: poder ordenar las peliculas
+Para: poder visualizarlas en orden alfabetico
+
+**Historia 4**
+Como: usuaria
+Quiero: poder filtrar las peliculas por productor y director
+Para: conocer que peliculas son trabajo de cada uno.
+
+**Historia 5**
+Como: Usuaria
+Quiero: Un boton de busqueda
+Para: Poder buscar las peliculas directamente por nombre
+
+**Historia 6**
+Como: usuaria
+Quiero: poder visualizar la informacion de las peliculas
+Para: tener una descripcion y otros datos de las peliculas
+
+**Historia 7**
+Como: usuaria
+Quiero: saber cuales son los personajes de las peliculas
+Para: saber mas sobre ellos
+
+**Historia 8**
+Como: Usuaria
+Quiero: Quiero ver un ranking de las peliculas mas vistas
+Para: Saber cuales son las 10 peliculas mas populares
+
 
 ## 4. Prototipos 🚀
 
@@ -65,58 +105,58 @@ Los objetivos de aprendizaje estudiados fueron:
 
 ### HTML
 
-- [ ] **Uso de HTML semántico**
+- [X] **Uso de HTML semántico**
   
 ### CSS
 
-- [ ] Uso de selectores de CSS
-- [ ] Modelo de caja (box model): borde, margen, padding
-- [ ] Uso de flexbox en CSS
+- [X] Uso de selectores de CSS
+- [X] Modelo de caja (box model): borde, margen, padding
+- [X] Uso de flexbox en CSS
 
   
 ### Web APIs
 
-- [ ] Uso de selectores del DOM
+- [X] Uso de selectores del DOM
 - [ ] Manejo de eventos del DOM (listeners, propagación, delegación)
-- [ ] Manipulación dinámica del DOM
+- [X] Manipulación dinámica del DOM
 
   
 ### JavaScript
 
-- [ ] Diferenciar entre tipos de datos primitivos y no primitivos
-- [ ] Arrays (arreglos)
-- [ ] Objetos (key, value)
-- [ ] Variables (declaración, asignación, ámbito)
-- [ ] Uso de condicionales (if-else, switch, operador ternario, lógica booleana)
+- [X] Diferenciar entre tipos de datos primitivos y no primitivos
+- [X] Arrays (arreglos)
+- [X] Objetos (key, value)
+- [X] Variables (declaración, asignación, ámbito)
+- [X] Uso de condicionales (if-else, switch, operador ternario, lógica booleana)
 - [ ] Uso de bucles/ciclos (while, for, for..of)
-- [ ] Funciones (params, args, return)
-- [ ] Pruebas unitarias (unit tests)
-- [ ] Módulos de ECMAScript (ES Modules)
-- [ ] Uso de linter (ESLINT)
-- [ ] Uso de identificadores descriptivos (Nomenclatura y Semántica)
-- [ ] Diferenciar entre expresiones (expressions) y sentencias (statements)
+- [X] Funciones (params, args, return)
+- [X] Pruebas unitarias (unit tests)
+- [X] Módulos de ECMAScript (ES Modules)
+- [X] Uso de linter (ESLINT)
+- [X] Uso de identificadores descriptivos (Nomenclatura y Semántica)
+- [X] Diferenciar entre expresiones (expressions) y sentencias (statements)
 
 ### Control de Versiones (Git y GitHub)
 
-- [ ] Git: Instalación y configuración
-- [ ] Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)
-- [ ] Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)
+- [X] Git: Instalación y configuración
+- [X] Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)
+- [X] Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)
 - [ ] GitHub: Creación de cuenta y repos, configuración de llaves SSH
-- [ ] GitHub: Despliegue con GitHub Pages
-- [ ] GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)
+- [X] GitHub: Despliegue con GitHub Pages
+- [X] GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)
 
 ### user-centricity
 
-- [ ] Diseñar un producto o servicio poniendo a la usuaria en el centro
+- [X] Diseñar un producto o servicio poniendo a la usuaria en el centro
 
 ### product-design
 
-- [ ] Crear prototipos de alta fidelidad que incluyan interacciones
-- [ ] Seguir los principios básicos de diseño visual
+- [X] Crear prototipos de alta fidelidad que incluyan interacciones
+- [X] Seguir los principios básicos de diseño visual
 
 ### research
 
-- [ ] Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad
+- [X] Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad
 
 ## 8. Autoras ✒️
 * [Fiorella Amaya](https://github.com/fiorellitamaya/)
