@@ -1,4 +1,4 @@
-import {sortByScore, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, filterByProductor, top10Films } from './data.js';
+import {sortByScore, sortAz, sortZa, sortOldest, sortLessOld, filterByDirector, top10Films, filterByProducer } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // let dataFilms;             //<----Jalando toda la Data desde archivo json
@@ -217,8 +217,8 @@ byDirector.addEventListener("click", function (event) {
 
 let byProducer = document.getElementById("productores"); //----> Filtrando por Productor
 byProducer.addEventListener("click", function (event) {
-    const productor = event.target.innerHTML
-    showFilms(filterByProductor(data.films, productor))
+    const producer = event.target.innerHTML
+    showFilms(filterByProducer(data.films, producer ))
 })
 
 const dataFilms = data.films

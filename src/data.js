@@ -38,9 +38,9 @@ export function filterByDirector(films, director) {
   })
 }
 
-export function filterByProductor(films, productor) {
+export function filterByProducer(films, producer) {
   return films.filter(function (film) {
-    return film.producer === productor
+    return film.producer === producer
   })
 }
 
