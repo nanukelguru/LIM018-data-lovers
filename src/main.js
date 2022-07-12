@@ -218,7 +218,7 @@ byDirector.addEventListener("click", function (event) {
 let byProducer = document.getElementById("productores"); //----> Filtrando por Productor
 byProducer.addEventListener("click", function (event) {
     const producer = event.target.innerHTML
-    showFilms(filterByProducer(data.films, producer ))
+    showFilms(filterByProducer(data.films, producer))
 })
 
 const dataFilms = data.films

@@ -91,7 +91,7 @@ Para: Saber cuales son las 10 peliculas mas populares
 
 ## 5. Interfaz
 
-https://fiorellitamaya.github.io/LIM018-data-lovers/src
+https://nanukelguru.github.io/LIM018-data-lovers/src/
 
 ## 6. Construido con 🛠️
 * Figma
